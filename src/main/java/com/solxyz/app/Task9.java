@@ -1,6 +1,5 @@
 package com.solxyz.app;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
