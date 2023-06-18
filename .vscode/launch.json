@@ -2,10 +2,45 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Task9",
+            "request": "launch",
+            "mainClass": "com.solxyz.app.Task9",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Task8",
+            "request": "launch",
+            "mainClass": "com.solxyz.app.Task8",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Task7",
+            "request": "launch",
+            "mainClass": "com.solxyz.app.Task7",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Task5",
+            "request": "launch",
+            "mainClass": "com.solxyz.app.Task5",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Test4",
+            "request": "launch",
+            "mainClass": "com.solxyz.app.Test4",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopOnEntry": false,
             "mainClass": "com.mycompany.app.App",
             "args": "",

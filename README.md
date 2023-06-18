@@ -1,91 +1,77 @@
-# Try Out Development Containers: Java
+# Java演習問題
 
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-java)
+> ※動作確認時の注意：文字の問題は文字か記号、数字の問題は数字を入力して動作確認を行います。特に数字の問題で文字を入力すると例外が発生します。課題９では例外を処理します。
 
-A **development container** is a running container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with **[GitHub Codespaces](https://github.com/features/codespaces)** or **[Visual Studio Code Dev Containers](https://aka.ms/vscode-remote/containers)**.
+---
 
-This is a sample project that lets you try out either option in a few easy steps. We have a variety of other [vscode-remote-try-*](https://github.com/search?q=org%3Amicrosoft+vscode-remote-try-&type=Repositories) sample projects, too.
+## 課題1
 
-> **Note:** If you already have a Codespace or dev container, you can jump to the [Things to try](#things-to-try) section.
+変数x,yに1文字ずつ入力し、その変数を交換後、結果を表示せよ。
 
-## Setting up the development container
+## 課題2
 
-### GitHub Codespaces
-Follow these steps to open this sample in a Codespace:
-1. Click the **Code** drop-down menu.
-2. Click on the **Codespaces** tab.
-3. Click **Create codespace on main**.
-
-For more info, check out the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
-
-### VS Code Dev Containers
-
-If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-java) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
-
-Follow these steps to open this sample in a container using the VS Code Dev Containers extension:
-
-1. If this is your first time using a development container, please ensure your system meets the pre-reqs (i.e. have Docker installed) in the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started).
-
-2. To use this repository, you can either open the repository in an isolated Docker volume:
-
-    - Press <kbd>F1</kbd> and select the **Dev Containers: Try a Sample...** command.
-    - Choose the "Java" sample, wait for the container to start, and try things out!
-        > **Note:** Under the hood, this will use the **Dev Containers: Clone Repository in Container Volume...** command to clone the source code in a Docker volume instead of the local filesystem. [Volumes](https://docs.docker.com/storage/volumes/) are the preferred mechanism for persisting container data.
-
-   Or open a locally cloned copy of the code:
-
-   - Clone this repository to your local filesystem.
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Open Folder in Container...** command.
-   - Select the cloned copy of this folder, wait for the container to start, and try things out!
-
-## Things to try
-
-Once you have this sample opened, you'll be able to work with it like you would locally.
-
-Some things to try:
-
-1. **Edit:**
-   - Open `src/main/java/com/mycompany/app/App.java`.
-   - Try adding some code and check out the language features.
-   - Make a spelling mistake and notice it is detected. The [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) extension was automatically installed because it is referenced in `.devcontainer/devcontainer.json`.
-   - Also notice that the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) is installed. The JDK is in the `mcr.microsoft.com/devcontainers/java` image and Dev Container settings and metadata are automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
-
-2. **Terminal:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
-
-3. **Build, Run, and Debug:**
-   - Open `src/main/java/com/mycompany/app/App.java`.
-   - Add a breakpoint.
-   - Press <kbd>F5</kbd> to launch the app in the container.
-   - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
-
-4. **Run a Test:**
-   - Open `src/test/java/com/mycompany/app/AppTest.java`.
-   - Put a breakpoint in a test.
-   - Click the `Debug Test` in the Code Lens above the function and watch it hit the breakpoint.
-
-5. **Install Node.js using a Dev Container Feature:**
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Configure Container Features...** or **Codespaces: Configure Container Features...** command.
-   - Type "node" in the text box at the top.
-   - Check the check box next to "Node.js (via nvm) and yarn" (published by devcontainers) 
-   - Click OK
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
-
+変数x,yに整数を入力し、加算、減算、乗算、除算を行い結果を表示せよ。
   
-## Contributing
+> ※除算に関しては、割り切れない場合も考慮すること。
 
-This project welcomes contributions and suggestions. Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+## 課題3
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+整数を入力し、その値が100以下なら「小さい」と、100を越えていれば「大きい」と表示せよ。
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## 課題4
 
-## License
+１文字入力し、大文字('A'～'Z')ならば「大文字」と、小文字('a'～'z')ならば「小文字」と表示せよ。それ以外は「エラー」と表示せよ。
 
-Copyright © Microsoft Corporation All rights reserved.<br />
-Licensed under the MIT License. See LICENSE in the project root for license information.
+## 課題5
+
+1～9までの整数を1つ入力し、入力された数の段の九九を表示せよ。1～9以外の数字が入力された場合は「エラー」と表示せよ。
+
+> 例：3を入力→3×1＝3・・・・3×9＝27
+>
+> ※九九は、for文を使って表示させること。
+
+## 課題6
+
+2つの整数を入力し、小さい数から大きい数までの総和を求めて表示せよ。
+
+> ※例えば1, 10 と入力しても、10, 1 と入力しても、同じ結果になること。
+
+## 課題7
+
+1から100までの偶数の合計を求めて表示せよ。
+
+> ヒント： 
+> 偶数を求める方法はいくつかあるが、ヒントとして３種類紹介する。
+> 1) 0から100まで、変数nを2ずつ増やしていく方法
+> 2) 0から50まで、変数nを1ずつ増やしていき、nの2倍を加算していく方法
+> 3) 0から100まで、変数nを1ずつ増やしていき、偶数のみを加算していく方法
+
+## 課題8
+
+2つの整数m,nを入力し、最大公約数を求めて表示せよ。
+
+> ヒント： 
+> 1) m÷nを計算し、あまりをrに代入する。 
+> 2) r＝0ならば、nが最大公約数である。 
+> 3) r≠0ならば、nをmに代入し、rをnに代入する。そして①から繰り返す。
+
+例）m=252、n=98の場合
+|処理回数 |	m	|n	|r|
+| --- | ---| ---| ---|
+|1	|252|	98	|56|
+|2	|98	|56	|42|
+|3	|56	|42	|14|
+|4	|42	|14	|0|
+したがって、最大公約数は14である。
+
+## 課題9
+
+50円切手と、80円切手を買いに、郵便局に行った。
+
+所持金はキーボードから入力された額とする。お釣りをもらうのは面倒なので、所持金ぴったりの額で買いたいが、何枚ずつ買えば良いか？
+
+買える全てのケースを表示せよ。
+
+所持金ぴったり買えない場合は「ぴったりは買えません」と表示せよ。
+
+また入力に数字以外が入力された場合に「数字を入力してください」と表示せよ。
