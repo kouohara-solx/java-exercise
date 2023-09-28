@@ -1,6 +1,7 @@
 package com.solxyz.app;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 課題9
@@ -13,24 +14,30 @@ import java.util.Scanner;
  * 所持金ぴったり買えない場合は「ぴったりは買えません」と表示せよ。
  */
 public class Task9 {
-    public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in)) {
-            int money = scanner.nextInt();
+    
 
-            boolean canBuyExact = false;
-            for (int i = 0; i <= money / 50; i++) {
-                for (int j = 0; j <= money / 80; j++) {
-                    if (50 * i + 80 * j == money) {
-                        System.out.println("50円切手: " + i + "枚, 80円切手: " + j + "枚");
-                        canBuyExact = true;
-                    }
+    /**
+     * 50円切手と80円切手をピッタリ買うことができるか判定する
+     * 買える場合は、何枚ずつ買えば良いかを表示する
+     * 
+     * @param money　所持金
+     * @return　ピッタリ買える場合はtrue、買えない場合はfalse
+     */
+    public boolean canBuyExact(int money) {
+        List<String> messages = new ArrayList<>();
+        for (int i = 0; i <= money / 50; i++) {
+            for (int j = 0; j <= money / 80; j++) {
+                if (50 * i + 80 * j == money) {
+                    messages.add("50円切手: " + i + "枚, 80円切手: " + j + "枚");
                 }
             }
-            if (!canBuyExact) {
-                System.out.println("ぴったりは買えません");
-            }
-        } catch (IllegalArgumentException e) {
-            System.out.println("数字を入力してください");
         }
+        if (messages.size() == 0) {
+            return false;
+        }
+        for (String message : messages) {
+            System.out.println(message);
+        }
+        return true;
     }
 }
