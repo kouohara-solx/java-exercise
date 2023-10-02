@@ -38,11 +38,11 @@ public class SampleTest {
         verify(taxCalculator, times(1)).calculateStandardTax(100);
 
         // Mockitoを使って、calculateReducedTaxメソッドの戻り値を100にする
-        // エラーを確認するためにコメントしている。コメントを外せば動作する。
-        // when(taxCalculator.calculateReducedTax(anyDouble())).thenReturn(100.0);
+        // 次の行をコメントするとactualReducedTaxが0.0となりエラー。モックを使うと実際のロジックは呼ばれない。
+        when(taxCalculator.calculateReducedTax(anyDouble())).thenReturn(100.0);
 
         double actualReducedTax = taxCalculator.calculateReducedTax(100);
-        // モックしていないので、エラーになる。actualReducedTaxが0.0になる
+        // モックした値が返却される
         assertEquals(100, actualReducedTax, 0.001);
         // 引数が100であること、一回呼ばれていることを検証
         verify(taxCalculator, times(1)).calculateReducedTax(100);
